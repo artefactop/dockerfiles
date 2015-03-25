@@ -1,7 +1,8 @@
 # This dockerfile will generate a release of MongooseIM for
 # ubuntu:14.04 with Erlang 17.4
 
-# docker run -v $(pwd)/bin:/opt/bin
+# docker build -t artefactop/mongooseim_builder
+# docker run --rm -v $(pwd)/bin:/opt/bin artefactop/mongooseim_builder
 
 FROM stevedomin/erlang-ubuntu:17.4
 
