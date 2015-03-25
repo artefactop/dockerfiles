@@ -11,6 +11,6 @@ RUN mkdir /opt/bin
 
 VOLUME /opt/bin
 
-ADD build.sh /
+ADD build /
 
-ENTRYPOINT ["build.sh"]
+ENTRYPOINT ["/build"]
