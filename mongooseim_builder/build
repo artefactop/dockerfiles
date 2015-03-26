@@ -22,5 +22,5 @@ install: compile
 	cp -va ${BUILD_PATH}/MongooseIM/rel/mongooseim ${INSTALL_PATH}
 
 generate: install
-	(cd ${INSTALL_PATH} && tar -cvvf mongooseim-${VERSION}.tar.gz ${BUILD_PATH}/MongooseIM/rel/mongooseim)
+	(cd ${BUILD_PATH}/MongooseIM/rel/ && tar -zcf ${INSTALL_PATH}/mongooseim-${VERSION}.tar.gz mongooseim)
 
