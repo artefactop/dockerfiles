@@ -4,7 +4,7 @@ VERSION=1.5.0
 INSTALL_PATH=/opt/bin
 BUILD_PATH=/opt
 
-all: install
+all: generate
 
 ${BUILD_PATH}/MongooseIM: ${BUILD_PATH}
 	(cd ${BUILD_PATH} && git clone https://github.com/esl/MongooseIM.git)
@@ -20,4 +20,7 @@ ${INSTALL_PATH}:
 
 install: compile
 	cp -va ${BUILD_PATH}/MongooseIM/rel/mongooseim ${INSTALL_PATH}
+
+generate: install
+	(cd ${INSTALL_PATH} && tar -cvvf mongooseim-${VERSION}.tar.gz ${BUILD_PATH}/MongooseIM/rel/mongooseim)
 
