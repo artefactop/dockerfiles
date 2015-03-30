@@ -1,6 +1,9 @@
 #!/usr/bin/make -f
 
-VERSION=1.5.0
+ifndef VERSION
+	VERSION = 1.5.0
+endif
+
 INSTALL_PATH=/opt/bin
 BUILD_PATH=/opt
 
